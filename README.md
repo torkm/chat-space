@@ -3,9 +3,9 @@
 ## users table
 |Column|Type|Options|
 |------|----|-------|
-|name|string|index:ture, null: false, unique:true|
+|name|string|index: true, null: false|
 |mail|string|null: false, unique:true|
-|nickname|string|null: false|
+|password|string|null: false|
 
 
 ### Association
@@ -33,12 +33,14 @@
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
+bodyとimageは少なくとも一方はnullではない
 ### Association
 - belongs_to :group
 - belongs_to :user
 
 
 ## members table
+usersとgroupsの中間テーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -48,40 +50,3 @@
 ### Association
 - belongs_to :group
 - belongs_to :user
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ... -->
