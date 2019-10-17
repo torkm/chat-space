@@ -1,18 +1,45 @@
-# README
-# データベース設計
+# DB configuration
 
-## usersテーブル
+## users table
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false|
-||integer|null: false, foreign_key: true|
+|name|string|null: false, unique:true|
+|mail|string|null: false, unique:true|
+|nickname|string|null: false|
+
+
+### Association
+- has_many :groups, through: members
+- has_many :messages
+- has_many :members
+
+
+## groups table
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+
+### Association
+- has_many :users, through: members
+- has_many :messages
+- has_many :members
+
+
+## messages table
+|Column|Type|Options|
+|------|----|-------|
+|body|text||
+|image|str||
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
 - belongs_to :user
 
 
-## groupsテーブル
+## members table
+
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
@@ -23,27 +50,6 @@
 - belongs_to :user
 
 
-## messagesテーブル
-|Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
-
-### Association
-- belongs_to :group
-- belongs_to :user
-
-
-## groups_usersテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
-
-### Association
-- belongs_to :group
-- belongs_to :user
 
 
 
@@ -56,9 +62,7 @@
 
 
 
-
-
-
+<!-- 
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
@@ -80,4 +84,4 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* ... -->
