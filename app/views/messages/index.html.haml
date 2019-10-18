@@ -4,10 +4,10 @@
     %meta(charset="UTF-8")/
     %meta(name="viewport" content="width=device-width, initial-scale=1.0")/
     %meta(http-equiv="X-UA-Compatible" content="ie=edge")/
-    %title Chatspace
+    %title test-chatspace
   %body
     .notice
-    グループを作成しました。
+      グループを作成しました。
     .contents
       %h1 コンテンツです
       .contents__menu
@@ -15,7 +15,8 @@
       .contents__conversations
         メッセージ表示欄です
         .post
-          投稿画面です
-
-      
-
+          = form_tag( root_path, method: :create) do          
+            = text_field_tag :key, params[:key], { placeholder: "type a message", class: "text" }
+    %footer
+      .footer
+        copyrights
