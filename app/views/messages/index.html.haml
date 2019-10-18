@@ -9,14 +9,29 @@
     .notice
       グループを作成しました。
     .contents
-      %h1 コンテンツです
-      .contents__menu
-        メニューです
-      .contents__conversations
-        メッセージ表示欄です
-        .post
-          = form_tag( root_path, method: :create) do          
-            = text_field_tag :key, params[:key], { placeholder: "type a message", class: "text" }
-    %footer
-      .footer
-        copyrights
+      .menu
+        .menu__header
+          test-user
+        .menu__group
+          %p test-group
+          %p さようなら
+        .menu__group
+          %p sample-group
+          %p hello!
+        .menu__group
+          %p example
+          %p まだメッセージがありません
+      .conversations
+        %h1 test-group
+        %h1 Menbers
+        .conversations__post
+        test-user
+        こんにちは！
+        .conversations__post
+        test-user
+        さようなら！
+        .message
+          .message-text
+            %input(type="textarea" value="type a message")
+          .message-send
+            %input(type="submit" value="Send")

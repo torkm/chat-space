@@ -1,12 +1,13 @@
-.contents__menu {
-  height: 90px;
+.menu {
+  height: 100%;
   width: 300px;
-  border-bottom:20px solid navy;
-  background-color: #ff8c00;
+  background-color: navy;
   color: #ffffff;
-  &__logo {
-    text-align: center;
-    font-size: 36px;
-    line-height: 90px;
+  &__header{
+    height: 82px;
+    background-color: black;
+  &__{
+
+  }
   }
 }
