@@ -4,6 +4,7 @@ html, body {
   padding: 0;
 }
 
+
 .header{
   position: fixed;
   height: 100px;
@@ -14,45 +15,52 @@ html, body {
   z-index: 1;
   display: flex;
   justify-content: flex-start;
+}
 
-  &-left{
-    background-color: #253141;
-    height: 100%;
-    line-height: 100px;
-    width: 300px;
+.userInfo{
+  background-color: #253141;
+  height: 100%;
+  line-height: 100px;
+  width: 300px;
+  
+  &__name{
     color: #ffffff;
     font-size: 16px;
     font-weight: bold;
-    text-align: center;
-  }
+    padding: 0 0 0 20px;
 
-  &-right{
-    background-color: #ffffff;
-    width: calc(100% - 300px);
-    &__group{
-      font-size: 20px;
-      color: #333333;
-      // float: left;
-    }
-    &__members{
-      font-size: 12px;
-      color: #999999;
-      // float: left;
-    }
-    &__edit{
-      height: 50px;
-      width: 100px;
-      padding: 0;
-      margin: 20px 40px 20px 15px;
-      background-color: #38aef0;
-      color: #fff;
-      border-style: none;
-      text-align: center;
-    }
   }
-
 }
 
+
+.groupInfo{
+  background-color: #ffffff;
+  width: calc(100% - 300px);
+  display: flex;
+  justify-content: space-between;
+  &-left{
+    &__name{
+      margin: 35px 0 0 40px;
+      font-size: 20px;
+      color: #333333;
+    }
+    &__members{
+      margin: 15px 0 0 40px;
+      font-size: 12px;
+      color: #999999;
+    }
+  }
+  &__edit{
+  color: #38aef0;
+  background-color: #ffffff;  
+  height: 40px;
+  padding: 0 20px;
+  margin: 28px 40px 28px 0;
+  border-width: 2px;
+  border-color: #38aef0;
+  text-align: center;
+  }
+}
 
 
 .main{

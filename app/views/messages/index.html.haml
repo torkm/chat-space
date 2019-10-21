@@ -11,15 +11,16 @@
      
     %header
       .header
-        .header-left 
-          %p test-user
-        .header-right
-          .header-right__group
-            %p test-group
-          .header-right__members
-            %p Member: test-user
-          .header-right__edit
-            %input(type="submit" value="edit")
+        .userInfo 
+          .userInfo__name
+            test-user
+        .groupInfo
+          .groupInfo-left
+            .groupInfo-left__name
+              %h2 test-group
+            .groupInfo-left__members
+              %p Member: test-user
+          %input.groupInfo__edit(type="submit" value="Edit")
         
       
     .main
