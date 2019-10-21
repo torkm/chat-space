@@ -68,7 +68,6 @@ html, body {
   }
   &__latest{
     font-size: 12px;
-
   }
 }
 
@@ -79,10 +78,22 @@ html, body {
   position: relative;
 }
 
-.post{
-  height: 60px;
-  background-color: gray;
+footer{
+  height: 100px;
+  background-color:lightgray;
   width: 100%;
   position: absolute;
   bottom: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+.post{
+  &__text{
+    padding: 0 10px;
+    line-height: 50px;
+  }
+  &__submit{
+    padding: 0 0 0 15px;
+    line-height: 50px; 
+  }
 }

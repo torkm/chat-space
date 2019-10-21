@@ -6,9 +6,10 @@
     %meta(http-equiv="X-UA-Compatible" content="ie=edge")/
     %title test-chatspace
   %body
+    .notice
+      グループを作成しました
+     
     %header
-      .notice
-        グループを作成しました
       .header
         .header-left 
           %p test-user
@@ -46,9 +47,8 @@
         さようなら！
         %footer
           .post
-            .post__text
-              %input(type="textarea" value="type a message")
-            .post__send
-              %input(type="submit" value="Send")
+            %input.post__text(type="textarea" value="type a message")
+
+            %input.post__submit(type="submit" value="Send")
 
 
