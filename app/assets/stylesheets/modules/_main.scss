@@ -13,20 +13,6 @@ html, body {
   background-color: #fafafa;
 }
 
-.sideBar{
-  background-color:#2f3e51;
-  width: 300px;
-  height: 100%;
-  float: left;
-  color: #ffffff;
-  font-weight: bold;
-  &__group{
-      font-size: 16px;
-  }
-  &__latest{
-    font-size: 12px;
-  }
-}
 
 .conversations{
   height: 100%;

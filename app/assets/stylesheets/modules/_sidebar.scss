@@ -1,21 +1,19 @@
-.menu {
-  height: 100%;
+
+.sideBar{
+  background-color:#2f3e51;
   width: 300px;
-  background-color: navy;
-  color: #ffffff;
-  &__header{
-    height: 82px;
-    background-color: black;
-  &__group{
-    height: 80px;
-    background-color: blue;
+  height: 100%;
+  float: left;
+  &-group{
+    margin: 20px;
+    color: #ffffff;
+    font-weight: bold;
     &__name{
       font-size: 15px;
+      margin-bottom: 5px;
     }
     &__latest{
       font-size: 11px;
     }
-
-  }
   }
 }

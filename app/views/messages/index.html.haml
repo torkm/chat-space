@@ -23,27 +23,30 @@
                 Member : 
                 %li 
                   test-user
+                %li 
+                  test-user2
           %input.groupInfo__edit(type="submit" value="Edit")
         
       
     .main
       .sideBar
-        .sideBar__group
-          test-group
-        .sideBar__latest
-          さようなら
-        .sideBar__group
-          sample-group
-        .sideBar__latest
-          hello!
-        .sideBar__group
-          example
-        .sideBar__latest
-          まだメッセージがありません
+        .sideBar-group
+          .sideBar-group__name
+            test-group
+          .sideBar-group__latest
+            さようなら
+        .sideBar-group
+          .sideBar-group__name
+            test-group
+          .sideBar-group__latest
+            さようなら
+        .sideBar-group
+          .sideBar-group__name
+            test-group
+          .sideBar-group__latest
+      
       .conversations
-        %h1 test-group
-        %h1 Menbers
-        .conversations__post
+        .message
         test-user
         こんにちは！
         .conversations__post
