@@ -8,7 +8,8 @@ html, body {
   position: fixed;
   height: 100px;
   width: 100%;
-  background-color: white;
+  padding-top: 20px;
+  background-color: #fafafa;
   display: flex;
   justify-content: flex-start;
 
@@ -47,8 +48,8 @@ html, body {
 .main{
   padding-top: 100px;
   width: 100%;
-  height: calc(100% - 180px);
-  background-color: lightgray;
+  height: calc(100% - 100px);
+  background-color: #fafafa;
 }
 
 .sidebar{
