@@ -13,9 +13,12 @@ html, body {
   justify-content: flex-start;
 
   &-left{
-  background-color: navy;
-  height: 100%;
-  width: 300px;
+    background-color: #253141;
+    height: 100%;
+    line-height: 100px;
+    width: 300px;
+    color: #ffffff;
+    font-size: 16px;
   }
 
   &-right{
@@ -23,10 +26,17 @@ html, body {
     width: calc(100% - 300px);
     &__group{
       font-size: 20px;
-      color: #333333
+      color: #333333;
+      // float: left;
+    }
+    &__members{
+      font-size: 12px;
+      color: #999999;
+      // float: left;
     }
     &__edit{
       font-size: 40px;
+      float: right;
     }
   }
 

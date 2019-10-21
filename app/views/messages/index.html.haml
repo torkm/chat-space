@@ -8,14 +8,15 @@
   %body
     %header
       .notice
-        グループを作成しました。
+        グループを作成しました
       .header
         .header-left 
           %p test-user
-          %p 投稿
         .header-right
-          .header-right--group
+          .header-right__group
             test-group
+          .header-right__members
+            Member: test-user
           .header-right__edit
             %input(type="submit" value="edit")
         
