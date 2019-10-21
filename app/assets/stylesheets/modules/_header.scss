@@ -25,10 +25,13 @@
     padding: 0 0 0 20px;
   }
   &__links{
+    padding: 0 20px 0 0;
     .cog{
       text-decoration: none;
+      
     }
     li{
+      color: #ffffff;
       display: inline;
     }
 
