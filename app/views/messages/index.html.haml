@@ -14,6 +14,14 @@
         .userInfo 
           .userInfo__name
             test-user
+          %ul.userInfo__links
+            %li.userInfo__links--edit
+            =link_to "#" do
+              = fa_icon 'edit',class: "fa-edit" 
+            %li.userInfo__links--cog
+            =link_to "#" do
+              = fa_icon 'cog' ,class: "fa-cog"           
+
         .groupInfo
           .groupInfo-left
             .groupInfo-left__name
@@ -63,10 +71,16 @@
           .message__text  
             こんにちは！
         %footer
+          .post__image     
           .post
             %input.post__text(type="textarea" value="type a message")
 
             %input.post__submit(type="submit" value="Send")
+            
+            .post__image
+            =link_to "#" do
+              = fa_icon 'image' ,class: "fa-image"           
+
 
 
 
