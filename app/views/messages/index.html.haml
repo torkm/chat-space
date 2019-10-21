@@ -6,15 +6,18 @@
     %meta(http-equiv="X-UA-Compatible" content="ie=edge")/
     %title test-chatspace
   %body
-    .notice
-      グループを作成しました。
-    .contents
-      .menu
+    %header
+      .notice
+        グループを作成しました。
+    .main
+      .
         .menu__header
           test-user
         .menu__group
-          %p test-group
-          %p さようなら
+          .menu__group__name 
+            test-group
+          .menu__group__latest 
+            さようなら
         .menu__group
           %p sample-group
           %p hello!
@@ -35,3 +38,5 @@
             %input(type="textarea" value="type a message")
           .message-send
             %input(type="submit" value="Send")
+
+

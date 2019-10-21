@@ -6,7 +6,15 @@
   &__header{
     height: 82px;
     background-color: black;
-  &__{
+  &__group{
+    height: 80px;
+    background-color: blue;
+    &__name{
+      font-size: 15px;
+    }
+    &__latest{
+      font-size: 11px;
+    }
 
   }
   }
