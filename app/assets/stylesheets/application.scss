@@ -1,3 +1,4 @@
+// リセットや変数
 @import "base/reset";
 @import "font-awesome";
 // @import "variable";
@@ -5,8 +6,8 @@
 
 // 構成要素
 @import "modules/notice";
-@import "modules/main";
 @import "modules/header";
+@import "modules/main";
 @import "modules/sidebar"
 
 // @import "conversations";
