@@ -9,13 +9,27 @@ html, body {
   height: 100px;
   width: 100%;
   background-color: white;
-  
-  
-  &__left{
+  display: flex;
+  justify-content: flex-start;
+
+  &-left{
   background-color: navy;
   height: 100%;
   width: 300px;
   }
+
+  &-right{
+    background-color: #fafafa;
+    width: calc(100% - 300px);
+    &__group{
+      font-size: 20px;
+      color: #333333
+    }
+    &__edit{
+      font-size: 40px;
+    }
+  }
+
 }
 
 

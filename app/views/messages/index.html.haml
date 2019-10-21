@@ -10,12 +10,15 @@
       .notice
         グループを作成しました。
       .header
-        test-group
-        .header__edit
-          %input(type="submit" value="edit")
-        .header__left 
+        .header-left 
           %p test-user
           %p 投稿
+        .header-right
+          .header-right--group
+            test-group
+          .header-right__edit
+            %input(type="submit" value="edit")
+        
       
     .main
       .sidebar
