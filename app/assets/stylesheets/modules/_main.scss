@@ -9,27 +9,27 @@ html, body {
   //notice24 + header100
   padding-top: 124px;
   width: 100%;
-  height: calc(100% - 100px);
+  height: calc(100vh - 124px);
   background-color: #fafafa;
 }
 
 
 .messages{
-  height: 100%;
-  width: calc(100% - 300px);
+  padding: 46px 0 46px 0;
+  width: calc(100vw - 300px);
   float: right;
   position: relative;
-
   .message{
-    padding-top: 46px;
+    padding: 0 40px 40px 40px;
     &__info{
-
       display: flex;
       justify-content: flex-start;
+      margin: 0 0 10px 0;
       &__speaker{
         font-size: 16px;
         color: #434A54;
         font-weight: bold;
+        margin: 0 10px 0  0;
       }
       &__date{
         font-size: 12px;
