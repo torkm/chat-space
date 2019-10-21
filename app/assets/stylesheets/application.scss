@@ -4,8 +4,12 @@
 
 
 // 構成要素
-// @import "conversations";
 @import "modules/notice";
 @import "modules/main";
+@import "modules/header";
+@import "modules/sidebar"
+
+// @import "conversations";
+
 // @import "message";
 // @import "style";
