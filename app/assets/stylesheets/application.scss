@@ -1,11 +1,11 @@
-@import "reset";
+@import "base/reset";
 @import "font-awesome";
-@import "variable";
+// @import "variable";
 
 
 // 構成要素
-@import "conversations";
-@import "notice";
-@import "menu";
-@import "message";
-@import "style";
+// @import "conversations";
+@import "modules/notice";
+@import "modules/main";
+// @import "message";
+// @import "style";

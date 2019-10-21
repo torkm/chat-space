@@ -1,7 +1,50 @@
-.contents {
-  height: 1000px;
-  border-bottom:20px solid #ffa500;
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.header{
+  position: fixed;
+  height: 100px;
+  width: 100%;
   background-color: white;
-  display: flex;
-  justify-content: flex-start;
+  
+  
+  &__left{
+  background-color: navy;
+  height: 100%;
+  width: 300px;
+  }
+}
+
+
+
+.main{
+  padding-top: 100px;
+  width: 100%;
+  height: calc(100% - 180px);
+  background-color: lightgray;
+}
+
+.sidebar{
+  background-color: blue;
+  width: 300px;
+  height: 100%;
+  float: left;
+}
+
+.conversations{
+  height: 100%;
+  width: calc(100% - 300px);
+  float: right;
+  position: relative;
+}
+
+.post{
+  height: 60px;
+  background-color: gray;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }

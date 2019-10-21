@@ -9,21 +9,28 @@
     %header
       .notice
         グループを作成しました。
+      .header
+        test-group
+        .header__edit
+          %input(type="submit" value="edit")
+        .header__left 
+          %p test-user
+          %p 投稿
+      
     .main
-      .
-        .menu__header
-          test-user
-        .menu__group
-          .menu__group__name 
-            test-group
-          .menu__group__latest 
-            さようなら
-        .menu__group
-          %p sample-group
-          %p hello!
-        .menu__group
-          %p example
-          %p まだメッセージがありません
+      .sidebar
+        .sidebar__group
+          test-group
+        .sidebar__latest
+          さようなら
+        .sidebar__group
+          sample-group
+        .sidebar__latest
+          hello!
+        .sidebar__group
+          example
+        .sidebar__latest
+          まだメッセージがありません
       .conversations
         %h1 test-group
         %h1 Menbers
@@ -33,10 +40,11 @@
         .conversations__post
         test-user
         さようなら！
-        .message
-          .message-text
-            %input(type="textarea" value="type a message")
-          .message-send
-            %input(type="submit" value="Send")
+        %footer
+          .post
+            .post__text
+              %input(type="textarea" value="type a message")
+            .post__send
+              %input(type="submit" value="Send")
 
 
