@@ -60,6 +60,8 @@ footer{
   display: flex;
   justify-content: flex-start;
   width: 100%;
+  position: relative;
+  
   &__text{
     margin: 20px 0 20px 40px;
     padding: 0 10px;
@@ -67,10 +69,16 @@ footer{
     height: 50px;
     width: calc(100% - 515px);
     border-style: none;
-    .fa-image{
-      font-size: 50px;
-    }
+    position: relative;
   }
+  
+  &__file{
+    position: absolute;
+    font-size: 45px;
+    color: #ffffff;
+  }
+
+
   &__submit{
     height: 50px;
     width: 100px;
@@ -82,3 +90,4 @@ footer{
     text-align: center;
   }
 }
+

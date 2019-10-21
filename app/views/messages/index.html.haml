@@ -17,9 +17,11 @@
             %li.userInfo__links--edit
             =link_to "#" do
               = fa_icon 'edit',class: "fa-edit" 
+              %span<>
             %li.userInfo__links--cog
             =link_to "#" do
-              = fa_icon 'cog' ,class: "fa-cog"           
+              = fa_icon 'cog' ,class: "fa-cog"   
+              %span<>        
 
         .groupInfo
           .groupInfo-left
@@ -70,12 +72,12 @@
           .message__text  
             こんにちは！
         %footer
-          .post__image     
           .post
             %input.post__text(type="textarea" value="type a message")
-              .post__text__file
+            .post__file
               =link_to "#" do
-                = fa_icon 'image' ,class: "fa-image"           
+                = fa_icon 'image' ,class: "fa-image"
+                %span<>           
 
             %input.post__submit(type="submit" value="Send")
             
