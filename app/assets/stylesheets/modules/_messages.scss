@@ -46,7 +46,7 @@ footer{
   justify-content: flex-start;
 
   &__form{
-    margin: 20px 0 20px $mg-main;
+    margin: $mg-form 0 $mg-form $mg-main;
     display: flex;
     justify-content: flex-start;
     position: relative;
@@ -57,7 +57,7 @@ footer{
       height: 50px;
       // この幅は
       border-style: none;
-      width: calc(100vw - #{$w-side} - 100px - #{$mg-main}*2 - 15px - #{$pd-form}*2);
+      width: calc(100vw - #{$w-side} - #{$w-submit} - #{$mg-main}*2 - #{$mg-submit} - #{$pd-form}*2);
     }
     
     &__file{
@@ -76,9 +76,9 @@ footer{
   }
   &__submit{
       height: 50px;
-      width: 100px;
+      width: $w-submit;
       padding: 0;
-      margin: 20px $mg-main 20px 15px;
+      margin: $mg-form $mg-main $mg-form $mg-submit;
       background-color: $btn-blue;
       color: #fff;
       border-style: none;
