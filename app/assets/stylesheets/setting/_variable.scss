@@ -8,19 +8,25 @@ $btn-blue: #38AEF0;
 
 
 // pixel values
+// w:width h:height pd:padding mg:margin h-mg:marginの縦方向 
+
+// sideBar
 $w-side: 300px;
+$w-pd-side: 20px;
 
-$pd-side: 20px;
-$pd-form: 10px;
+// messages
+$w-mg-messages: 40px;
 
-$mg-main: 40px;
-// formの縦
-$mg-form: 20px;
+// form
+$w-pd-form: 10px;
+$h-mg-form: 20px;
 
-
+// notice
 $h-notice: 24px;
+// header
 $h-header: 100px;
+// footer
 $h-footer: 90px;
-
+// button
 $w-submit: 100px;
-$mg-submit: 15px;
+$w-mg-submit: 15px;

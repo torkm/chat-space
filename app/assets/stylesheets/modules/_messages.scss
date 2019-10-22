@@ -5,7 +5,7 @@
   float: right;
   overflow-y: scroll;
   .message{
-    padding: 0 $mg-main 40px $mg-main;
+    padding: 0 $w-mg-messages 40px $w-mg-messages;
     &__info{
       display: flex;
       justify-content: flex-start;
@@ -47,7 +47,7 @@ footer{
   justify-content: flex-start;
 
   &__form{
-    margin: $mg-form 0 $mg-form $mg-main;
+    margin: $h-mg-form 0 $h-mg-form $w-mg-messages;
     display: flex;
     justify-content: flex-start;
     position: relative;
@@ -58,7 +58,7 @@ footer{
       height: 50px;
       // この幅は
       border-style: none;
-      width: calc(100vw - #{$w-side} - #{$w-submit} - #{$mg-main}*2 - #{$mg-submit} - #{$pd-form}*2);
+      width: calc(100vw - #{$w-side} - #{$w-submit} - #{$w-mg-messages}*2 - #{$w-mg-submit} - #{$w-pd-form}*2);
     }
     
     &__file{
@@ -79,7 +79,7 @@ footer{
       height: 50px;
       width: $w-submit;
       padding: 0;
-      margin: $mg-form $mg-main $mg-form $mg-submit;
+      margin: $h-mg-form $w-mg-messages $h-mg-form $w-mg-submit;
       background-color: $btn-blue;
       color: #fff;
       border-style: none;
