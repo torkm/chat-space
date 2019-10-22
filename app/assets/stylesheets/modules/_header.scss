@@ -1,8 +1,8 @@
 .header{
   position: fixed;
-  height: 100px;
+  height: $h-header;
   width: 100%;
-  padding-top: 24px;
+  padding-top: $h-notice;
   background-color: #fafafa;
   position: fixed;
   z-index: 1;
@@ -14,7 +14,7 @@
   background-color: #253141;
   color: $txt-white;
   height: 100%;
-  line-height: 100px;
+  line-height: $h-header;
   width: $w-side;
   display: flex;
   justify-content: space-between;
