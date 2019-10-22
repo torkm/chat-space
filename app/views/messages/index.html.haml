@@ -73,13 +73,16 @@
             こんにちは！
         %footer
           .post
-            %input.post__text(type="textarea" value="type a message")
-            .post__file
-              =link_to "#" do
-                = fa_icon 'image' ,class: "fa-image"
-                %span<>           
+            
+            .post__form
+              %input.post__form__text(type="textarea" value="type a message")
 
-            %input.post__submit(type="submit" value="Send")
+              .post__form__file
+                =link_to "#"do
+                  = fa_icon 'image' 
+                  %span<>           
+
+              %input.post__form__submit(type="submit" value="Send")
             
             
 

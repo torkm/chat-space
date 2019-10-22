@@ -5,6 +5,7 @@ html, body {
 }
 
 
+
 .main{
   //notice24 + header100
   padding-top: 124px;
@@ -18,7 +19,6 @@ html, body {
   padding: 46px 0 46px 0;
   width: calc(100vw - 300px);
   float: right;
-  position: relative;
   .message{
     padding: 0 40px 40px 40px;
     &__info{
@@ -49,45 +49,57 @@ footer{
   height: 90px;
   background-color:lightgray;
   width: 100%;
-  position: absolute;
-  bottom: 0;
   display: flex;
   justify-content: flex-start;
   position: fixed;
   bottom: 0;
 }
+
+
 .post{
-  display: flex;
-  justify-content: flex-start;
-  width: 100%;
-  position: relative;
-  
-  &__text{
-    margin: 20px 0 20px 40px;
-    padding: 0 10px;
-    color: #434A54;
-    height: 50px;
-    width: calc(100% - 515px);
-    border-style: none;
+
+  &__form{
+    margin: 20px 40px;
+    display: flex;
+    justify-content: flex-start;
     position: relative;
+
+
+    &__text{
+      padding: 0 10px;
+      color: #434A54;
+      height: 50px;
+      // この幅は
+      border-style: none;
+      width: calc(100vw - 515px);
+    }
+    
+    &__file{
+      font-size: 20px;
+      color: #ffffff;
+      position: absolute;
+      // __formをralativeの基準にしないとおかしくなる
+      right: calc(100px + 15px + 10px);
+      top: 10px;
+      bottom: 10px;
+    }
+   
+    a{
+      text-decoration: none;
+      color: black;
+    }
+    
+    &__submit{
+      height: 50px;
+      width: 100px;
+      padding: 0;
+      margin: 0 0 0 15px;
+      background-color: #38aef0;
+      color: #fff;
+      border-style: none;
+      text-align: center;
+    }
   }
   
-  &__file{
-    position: absolute;
-    font-size: 45px;
-    color: #ffffff;
-  }
-
-
-  &__submit{
-    height: 50px;
-    width: 100px;
-    padding: 0;
-    margin: 20px 40px 20px 15px;
-    background-color: #38aef0;
-    color: #fff;
-    border-style: none;
-    text-align: center;
-  }
 }
 
