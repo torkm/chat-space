@@ -1,10 +1,10 @@
 
 .messages{
   padding: 46px 0 46px 0;
-  width: calc(100vw - 300px);
+  width: calc(100% - #{$w-side});
   float: right;
   .message{
-    padding: 0 40px 40px 40px;
+    padding: 0 $mg-main 40px $mg-main;
     &__info{
       display: flex;
       justify-content: flex-start;
@@ -46,7 +46,7 @@ footer{
   justify-content: flex-start;
 
   &__form{
-    margin: 20px 0 20px 40px;
+    margin: 20px 0 20px $mg-main;
     display: flex;
     justify-content: flex-start;
     position: relative;
@@ -57,7 +57,7 @@ footer{
       height: 50px;
       // この幅は
       border-style: none;
-      width: calc(100vw - 300px - 100px - 80px - 15px - 20px);
+      width: calc(100vw - #{$w-side} - 100px - #{$mg-main}*2 - 15px - #{$pd-form}*2);
     }
     
     &__file{
@@ -78,7 +78,7 @@ footer{
       height: 50px;
       width: 100px;
       padding: 0;
-      margin: 20px 40px 20px 15px;
+      margin: 20px $mg-main 20px 15px;
       background-color: $btn-blue;
       color: #fff;
       border-style: none;

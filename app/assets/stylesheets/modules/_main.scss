@@ -6,9 +6,8 @@ html, body {
 
 
 main{
-  //notice24 + header100
-  padding-top: 124px;
+  padding-top: $h-header + $h-notice;
   width: 100%;
-  height: calc(100vh - 124px);
+  height: calc(100vh - #{$h-header + $h-notice});
   background-color: #fafafa;
 }

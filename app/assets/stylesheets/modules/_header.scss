@@ -15,17 +15,17 @@
   color: $txt-white;
   height: 100%;
   line-height: 100px;
-  width: 300px;
+  width: $w-side;
   display: flex;
   justify-content: space-between;
 
   &__name{
     font-size: 16px;
     font-weight: bold;
-    padding: 0 0 0 20px;
+    padding: 0 0 0 $pd-side;
   }
   &__links{
-    padding: 0 20px 0 0;
+    padding: 0 $pd-side 0 0;
     li{
       display: inline;
     }
@@ -39,7 +39,7 @@
 
 .groupInfo{
   background-color: $txt-white;
-  width: calc(100% - 300px);
+  width: calc(100% - #{$w-side});
   display: flex;
   justify-content: space-between;
   border-bottom: solid;
@@ -47,12 +47,12 @@
   border-width: 1px;
   &-left{
     &__name{
-      margin: 35px 0 0 40px;
-      font-size: 20px;
+      margin: 35px 0 0 $mg-main;
+      font-size: $pd-side;
       color: #333333;
     }
     &__members{
-      margin: 15px 0 0 40px;
+      margin: 15px 0 0 $mg-main;
       font-size: 12px;
       color: $txt-bg;
       li{
@@ -65,7 +65,7 @@
   background-color: $txt-white;  
   height: 40px;
   padding: 0 20px;
-  margin: 28px 40px 28px 0;
+  margin: 28px $mg-main 28px 0;
   border-color: #38aef0;
   text-align: center;
   }

@@ -1,11 +1,11 @@
 
 .sideBar{
   background-color:#2f3e51;
-  width: 300px;
+  width: $w-side;
   height: 100%;
   float: left;
   &-group{
-    margin: 20px;
+    margin: 20px $pd-side;
     color: $txt-white;
     font-weight: bold;
     &__name{
