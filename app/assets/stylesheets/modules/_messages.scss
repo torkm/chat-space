@@ -11,18 +11,18 @@
       margin: 0 0 10px 0;
       &__speaker{
         font-size: 16px;
-        color: #434A54;
+        color: $txt-black;
         font-weight: bold;
         margin: 0 10px 0  0;
       }
       &__date{
         font-size: 12px;
-        color: #999999;
+        color: $txt-bg;
       }
     }
     &__text{
       font-size:  14px;
-      color: #434A54;
+      color: $txt-black;
     }
   }
 }
@@ -53,7 +53,7 @@ footer{
 
     &__text{
       padding: 0 10px;
-      color: #434A54;
+      color: $txt-black;
       height: 50px;
       // この幅は
       border-style: none;
@@ -79,7 +79,7 @@ footer{
       width: 100px;
       padding: 0;
       margin: 20px 40px 20px 15px;
-      background-color: #38aef0;
+      background-color: $btn-blue;
       color: #fff;
       border-style: none;
       text-align: center;
