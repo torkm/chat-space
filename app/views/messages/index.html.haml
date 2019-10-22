@@ -34,7 +34,7 @@
                   test-user
                 %li 
                   test-user2
-          %input.groupInfo__edit(type="submit" value="Edit")
+          %input.groupInfo__edit{type: "submit", placeholder: "Edit"}
         
       
     .main
@@ -75,14 +75,14 @@
           .post
             
             .post__form
-              %input.post__form__text(type="textarea" value="type a message")
+              %input.post__form__text{type: "textarea", placeholder: "type a message"}
 
               .post__form__file
                 =link_to "#"do
                   = fa_icon 'image' 
                   %span<>           
 
-            %input.post__submit(type="submit" value="Send")
+            %input.post__submit{type: "submit", placeholder: "Send"}
             
             
 
