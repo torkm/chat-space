@@ -76,12 +76,13 @@
             
             .post__form
               %input.post__form__text{type: "textarea", placeholder: "type a message"}
-
-              .post__form__file
-                =link_to "#"do
-                  = fa_icon 'image' 
-                  %span<>           
-
+         
+              %form.post__form__file(action="post")
+                %label
+                  %i.fa.fa-image.post__form__file-icon
+                  %input.post__form__file-button{type: "file"}
+          
+           
             %input.post__submit{type: "submit", value: "Send"}
             
             

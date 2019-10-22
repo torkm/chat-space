@@ -62,17 +62,16 @@ footer{
     
     &__file{
       font-size: 20px;
-      color: #ffffff;
+      color: black;
       position: absolute;
       // __formをralativeの基準にする(サイズはtextareaで指定)
       right: 10px;
       top: 10px;
       bottom: 10px;
-    }
-   
-    a{
-      text-decoration: none;
-      color: black;
+    
+      &-button{
+        display: none;
+      }   
     }
   }
   &__submit{
