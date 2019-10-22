@@ -3,6 +3,7 @@
   padding: 46px 0 46px 0;
   width: calc(100% - #{$w-side});
   float: right;
+  overflow-y: scroll;
   .message{
     padding: 0 $mg-main 40px $mg-main;
     &__info{
