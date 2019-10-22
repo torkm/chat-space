@@ -1,0 +1,89 @@
+
+.messages{
+  padding: 46px 0 46px 0;
+  width: calc(100vw - 300px);
+  float: right;
+  .message{
+    padding: 0 40px 40px 40px;
+    &__info{
+      display: flex;
+      justify-content: flex-start;
+      margin: 0 0 10px 0;
+      &__speaker{
+        font-size: 16px;
+        color: #434A54;
+        font-weight: bold;
+        margin: 0 10px 0  0;
+      }
+      &__date{
+        font-size: 12px;
+        color: #999999;
+      }
+    }
+    &__text{
+      font-size:  14px;
+      color: #434A54;
+    }
+  }
+}
+
+
+
+footer{
+  height: 90px;
+  background-color:lightgray;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  position: fixed;
+  bottom: 0;
+}
+
+
+.post{
+
+  &__form{
+    margin: 20px 40px;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+
+
+    &__text{
+      padding: 0 10px;
+      color: #434A54;
+      height: 50px;
+      // この幅は
+      border-style: none;
+      width: calc(100vw - 515px);
+    }
+    
+    &__file{
+      font-size: 20px;
+      color: #ffffff;
+      position: absolute;
+      // __formをralativeの基準にしないとおかしくなる
+      right: calc(100px + 15px + 10px);
+      top: 10px;
+      bottom: 10px;
+    }
+   
+    a{
+      text-decoration: none;
+      color: black;
+    }
+    
+    &__submit{
+      height: 50px;
+      width: 100px;
+      padding: 0;
+      margin: 0 0 0 15px;
+      background-color: #38aef0;
+      color: #fff;
+      border-style: none;
+      text-align: center;
+    }
+  }
+  
+}
+
