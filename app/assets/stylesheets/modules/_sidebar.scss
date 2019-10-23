@@ -5,8 +5,7 @@
   background-color:#2f3e51;
   width: $w-side;
   // vhにして、overflow記述して、左右要素でスクロール
-  // height: 100vh;
-  height: calc(100vh - #{$h-header + $h-notice});
+  height: calc(100vh - #{$h-header});
 
   overflow: auto;
   float: left;
