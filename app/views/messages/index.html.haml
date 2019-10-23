@@ -1,17 +1,15 @@
-.notice
-  グループを作成しました
 %header
   .header
     .userInfo 
       .userInfo__name
-        test-user
+        = current_user.name
       %ul.userInfo__links
         %li.userInfo__links__edit
         =link_to "#" do
           = fa_icon 'edit',class: "fa-edit" 
           %span<>
         %li.userInfo__links__cog
-        =link_to "#" do
+        =link_to edit_user_path(current_user) do
           = fa_icon 'cog' ,class: "fa-cog"   
           %span<>        
 
@@ -36,7 +34,7 @@
         test-group
       .sideBar-group__latest
         さようなら
-    - 1.upto(3) do |i|
+    - 1.upto(30) do |i|
       .sideBar-group
         .sideBar-group__name
           test-group#{i}
@@ -52,7 +50,7 @@
           2019/10/16(Wed) 17:25:27
       .message__text  
         こんにちは！
-    - 1.upto(3) do |i|
+    - 1.upto(30) do |i|
       .message
         .message__info
           .message__info__speaker
