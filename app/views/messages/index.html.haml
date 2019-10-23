@@ -37,7 +37,7 @@
           %input.groupInfo__edit{type: "submit", value: "Edit"}
         
       
-      %main
+    %main
       .sideBar
         .sideBar-group
           .sideBar-group__name
@@ -45,7 +45,7 @@
           .sideBar-group__latest
             さようなら
         -# スクロール確認のためoverflowさせる
-        - 1.upto(20) do |i|
+        - 1.upto(3) do |i|
           .sideBar-group
             .sideBar-group__name
               test-group#{i}
@@ -62,7 +62,7 @@
               2019/10/16(Wed) 17:25:27
           .message__text  
             こんにちは！
-        - 1.upto(20) do |i|
+        - 1.upto(3) do |i|
           .message
             .message__info
               .message__info__speaker

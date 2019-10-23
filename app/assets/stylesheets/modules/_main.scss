@@ -7,7 +7,5 @@ html, body {
 
 main{
   padding-top: $h-header + $h-notice;
-  width: 100%;
-  height: calc(100% - #{$h-header + $h-notice});
-  background-color: #fafafa;
 }
+
