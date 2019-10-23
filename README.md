@@ -3,7 +3,7 @@
 ## users table
 |Column|Type|Options|
 |------|----|-------|
-|name|string|index: true, null: false|
+|name|string|index: true, unique:true,  null: false|
 |mail|string|null: false, unique:true|
 |password|string|null: false|
 
