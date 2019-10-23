@@ -5,9 +5,7 @@
   padding: 46px 0 $h-footer 0;
   box-sizing: border-box;
   width: calc(100% - #{$w-side});
-  // height: 100vh;
   height: calc(100vh - #{$h-header + $h-notice});
-
   overflow-y: scroll;
   float: right;
   .message{
