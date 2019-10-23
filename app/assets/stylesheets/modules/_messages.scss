@@ -1,0 +1,94 @@
+
+.messages{
+  margin: 0;
+  background-color: #fafafa;
+  padding: 46px 0 $h-footer 0;
+  box-sizing: border-box;
+  width: calc(100% - #{$w-side});
+  // height: 100vh;
+  height: calc(100vh - #{$h-header + $h-notice});
+
+  overflow-y: scroll;
+  float: right;
+  .message{
+    padding: 0 $w-mg-messages 40px $w-mg-messages;
+    &__info{
+      display: flex;
+      justify-content: flex-start;
+      margin: 0 0 10px 0;
+      &__speaker{
+        font-size: 16px;
+        color: $txt-black;
+        font-weight: bold;
+        margin: 0 10px 0  0;
+      }
+      &__date{
+        font-size: 12px;
+        color: $txt-bg;
+      }
+    }
+    &__text{
+      font-size:  14px;
+      color: $txt-black;
+    }
+  }
+}
+
+
+
+footer{
+  height: $h-footer;
+  background-color:lightgray;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  position: fixed;
+  bottom: 0;
+}
+
+
+.post{
+  
+  display: flex;
+  justify-content: flex-start;
+
+  &__form{
+    margin: $h-mg-form 0 $h-mg-form $w-mg-messages;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+
+    &__text{
+      padding: 0 10px;
+      color: $txt-black;
+      height: 50px;
+      // この幅は
+      border-style: none;
+      width: calc(100vw - #{$w-side} - #{$w-submit} - #{$w-mg-messages}*2 - #{$w-mg-submit} - #{$w-pd-form}*2);
+    }
+    
+    &__file{
+      font-size: 20px;
+      color: black;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      bottom: 10px;
+    
+      &-button{
+        display: none;
+      }   
+    }
+  }
+  &__submit{
+      height: 50px;
+      width: $w-submit;
+      padding: 0;
+      margin: $h-mg-form $w-mg-messages $h-mg-form $w-mg-submit;
+      background-color: $btn-blue;
+      color: #fff;
+      border-style: none;
+      text-align: center;
+  }
+}
+

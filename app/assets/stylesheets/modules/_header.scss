@@ -1,0 +1,72 @@
+.header{
+  position: fixed;
+  height: $h-header;
+  width: 100%;
+  padding-top: $h-notice;
+  background-color: #fafafa;
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.userInfo{
+  background-color: #253141;
+  color: $txt-white;
+  height: 100%;
+  line-height: $h-header;
+  width: $w-side;
+  display: flex;
+  justify-content: space-between;
+
+  &__name{
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 0 0 $w-pd-side;
+  }
+  &__links{
+    padding: 0 $w-pd-side 0 0;
+    li{
+      display: inline;
+    }
+   a{
+      text-decoration: none;
+      color: $txt-white;
+    }
+  }
+}
+
+
+.groupInfo{
+  background-color: $txt-white;
+  width: calc(100% - #{$w-side});
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid;
+  border-color: #eeeeee;
+  border-width: 1px;
+  &-left{
+    &__name{
+      margin: 35px 0 0 $w-mg-messages;
+      font-size: $w-pd-side;
+      color: #333333;
+    }
+    &__members{
+      margin: 15px 0 0 $w-mg-messages;
+      font-size: 12px;
+      color: $txt-bg;
+      li{
+        display: inline;
+      }
+    }
+  }
+  &__edit{
+  color: #38aef0;
+  background-color: $txt-white;  
+  height: 40px;
+  padding: 0 20px;
+  margin: 28px $w-mg-messages 28px 0;
+  border-color: #38aef0;
+  text-align: center;
+  }
+}
