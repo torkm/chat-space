@@ -4,6 +4,7 @@
   width: $w-side;
   // vhにして、overflow記述して、左右要素でスクロール
   height: 100vh;
+  
   overflow: scroll;
   float: left;
   &-group{

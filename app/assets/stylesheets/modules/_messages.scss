@@ -1,10 +1,11 @@
 
 .messages{
-  padding: 46px 0 46px 0;
+  padding: 46px 0 $h-footer 0;
   width: calc(100% - #{$w-side});
+  // height: calc(100vh - #{$h-footer});
   height: 100vh;
-  float: right;
   overflow-y: scroll;
+  float: right;
   .message{
     padding: 0 $w-mg-messages 40px $w-mg-messages;
     &__info{
