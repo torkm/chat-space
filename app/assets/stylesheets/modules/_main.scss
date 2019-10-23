@@ -8,6 +8,8 @@ html, body {
 main{
   padding-top: $h-header + $h-notice;
   width: 100%;
-  height: calc(100vh - #{$h-header + $h-notice});
+  height: calc(100% - #{$h-header + $h-notice});
   background-color: #fafafa;
+  display: flex;
+  justify-content: flex-start;
 }

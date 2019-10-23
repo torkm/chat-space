@@ -2,7 +2,9 @@
 .sideBar{
   background-color:#2f3e51;
   width: $w-side;
-  height: 100%;
+  // vhにして、overflow記述して、左右要素でスクロール
+  height: 100vh;
+  overflow: scroll;
   float: left;
   &-group{
     margin: 20px $w-pd-side;

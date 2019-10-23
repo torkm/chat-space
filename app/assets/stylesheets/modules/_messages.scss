@@ -2,6 +2,7 @@
 .messages{
   padding: 46px 0 46px 0;
   width: calc(100% - #{$w-side});
+  height: 100vh;
   float: right;
   overflow-y: scroll;
   .message{
