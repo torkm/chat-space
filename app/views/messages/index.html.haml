@@ -27,11 +27,19 @@
       %input.groupInfo__edit{type: "submit", value: "Edit"}
 %main
   .sideBar
+    - current_user.groups.each do |group|
+      = link_to '#' do
+        .sideBar-group
+          .sideBar-group__name
+            = group.name
+          .sideBar-group__latest
+            メッセージはまだありません。
+
     .sideBar-group
       .sideBar-group__name
-        test-group
+        teaaa
       .sideBar-group__latest
-        さようなら
+        メッセージはまだありません
     - 1.upto(30) do |i|
       .sideBar-group
         .sideBar-group__name
