@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   root to: 'messages#index'
   resources :users, only: [:edit, :update]
   resources :groups, only:[:edit, :update, :new, :create]
+    resources :messages, only[:index, :new, :create]
   # 中間テーブルはrouting不要
 end
