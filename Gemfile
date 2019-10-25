@@ -60,3 +60,6 @@ gem "font-awesome-rails"
 
 # Use devise
 gem 'devise'
+
+# Use binding.pry
+gem 'pry-rails'
