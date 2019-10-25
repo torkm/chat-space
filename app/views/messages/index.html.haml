@@ -37,13 +37,17 @@
 
   .messages
     .message
-      .message__info
-        .message__info__speaker
-          test-user
-        .message__info__date
-          2019/10/16(Wed) 17:25:27
-      .message__text  
-        こんにちは！
+      -# = render partial: 'message', collection: @messages
+
+      - @group.messages.each do |message|
+        .message__info
+          .message__info__speaker
+            = message.user.name
+          .message__info__date
+            = message.created_at.strftime("%Y/%m/%d %H:%M")
+        .message__text  
+          = message.body
+    
     %footer
       = form_for [@group, @message],  html: { class: "post"} do |f|
         .post__form
