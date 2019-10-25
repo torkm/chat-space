@@ -26,9 +26,14 @@
         color: $txt-bg;
       }
     }
-    &__text{
-      font-size:  14px;
-      color: $txt-black;
+    &__content{
+      &__text{
+        font-size:  14px;
+        color: $txt-black;
+      }
+      &__image{
+        
+      }
     }
   }
 }
