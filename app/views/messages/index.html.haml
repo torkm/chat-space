@@ -32,13 +32,13 @@
         .sideBar-group
           .sideBar-group__name
             = group.name
-          .sideBar-group__latest
-            メッセージはまだありません。
-
+          .sideBar-group__latest 
+            -# = group.messages[-1][:body] だめな理由がわからない
+            = group.show_last_message
+            
   .messages
     = render @messages
     -# = render partial: 'message', collection: @messages の略
-
 
     
     %footer
