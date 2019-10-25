@@ -1,0 +1,11 @@
+.message
+  .message__info
+    .message__info__speaker
+      = message.user.name
+    .message__info__date
+      = message.created_at.strftime("%Y/%m/%d %H:%M")
+  .message__text  
+    -# 画像のみのときもあるので、条件分岐　
+    - if message.body.present?
+      = message.body
+    = image_tag message.image.url, class: 'message__image' if message.image.present?

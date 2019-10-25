@@ -36,17 +36,10 @@
             メッセージはまだありません。
 
   .messages
-    .message
-      -# = render partial: 'message', collection: @messages
+    = render @messages
+    -# = render partial: 'message', collection: @messages の略
 
-      - @group.messages.each do |message|
-        .message__info
-          .message__info__speaker
-            = message.user.name
-          .message__info__date
-            = message.created_at.strftime("%Y/%m/%d %H:%M")
-        .message__text  
-          = message.body
+
     
     %footer
       = form_for [@group, @message],  html: { class: "post"} do |f|
