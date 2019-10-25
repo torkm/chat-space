@@ -54,20 +54,31 @@
         .message__text  
           こんにちは！        
     %footer
-      .post
+      -# .post
         
-        .post__form
-          %input.post__form__text{type: "textarea", placeholder: "type a message"}
-      
-          %form.post__form__file(action="post")
-            %label
-              %i.fa.fa-image.post__form__file-icon
-              %input.post__form__file-button{type: "file"}
-      
-        
-        %input.post__submit{type: "submit", value: "Send"}
-        
-        
+      -#   .post__form
 
+      -#     %input.post__form__text{type: "textarea", placeholder: "type a message"}
+      
+      -#     %form.post__form__file(action="post")
+      -#       %label
+      -#         %i.fa.fa-image.post__form__file-icon
+      -#         %input.post__form__file-button{type: "file"}
+      
+        
+      -#   %input.post__submit{type: "submit", value: "Send"}
+        
+      .post
+        = form_for [@group, @message] do |f|
+          .post__form
+            = f.text_field :body, class: 'post__form__text', placeholder: 'type a message'
+            
+            .post__form__file
+              = f.label :image do
+                = fa_icon 'picture-o', class: 'fa fa-image post__form__file-icon'
+                = f.file_field :image, class: 'post__form__file-button'
+          
+          .post__submit
+            = f.submit 'Send', class: 'form__submit'
 
 
