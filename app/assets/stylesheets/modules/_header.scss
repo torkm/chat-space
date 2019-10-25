@@ -39,6 +39,10 @@ html, body {
   }
 }
 
+.groupInfo--root{
+  background-color: $txt-white;
+  width: calc(100% - #{$w-side});
+}
 
 .groupInfo{
   background-color: $txt-white;

@@ -13,18 +13,9 @@
           = fa_icon 'cog' ,class: "fa-cog"   
           %span<>        
 
-    .groupInfo
-      .groupInfo-left
-        .groupInfo-left__name
-          test-group
-        .groupInfo-left__members
-          %ul 
-            Member : 
-            %li 
-              test-user
-            %li 
-              test-user2
-      %input.groupInfo__edit{type: "submit", value: "Edit"}
+    -# bg-colorを白にするために必要になった
+    .groupInfo--root
+
 %main
   .sideBar
     - current_user.groups.each do |group|
@@ -35,39 +26,6 @@
           .sideBar-group__latest
             メッセージはまだありません。
 
-  .messages
-    .message
-      .message__info
-        .message__info__speaker
-          test-user
-        .message__info__date
-          2019/10/16(Wed) 17:25:27
-      .message__text  
-        こんにちは！
-    - 1.upto(30) do |i|
-      .message
-        .message__info
-          .message__info__speaker
-            test-user#{i}
-          .message__info__date
-            2019/10/16(Wed) 17:25:27
-        .message__text  
-          こんにちは！        
-    %footer
-      .post
-        
-        .post__form
-          %input.post__form__text{type: "textarea", placeholder: "type a message"}
-      
-          %form.post__form__file(action="post")
-            %label
-              %i.fa.fa-image.post__form__file-icon
-              %input.post__form__file-button{type: "file"}
-      
-        
-        %input.post__submit{type: "submit", value: "Send"}
-        
-        
 
 
 
