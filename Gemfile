@@ -63,3 +63,7 @@ gem 'devise'
 
 # Use binding.pry
 gem 'pry-rails'
+
+# Use image uploder and resizer
+gem 'carrierwave'
+gem 'mini_magick'
