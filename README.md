@@ -34,6 +34,7 @@
 |group_id|integer|null: false, foreign_key: true|
 
 bodyとimageは少なくとも一方はnullではない
+- validates :body, presence: true, unless: :image?
 ### Association
 - belongs_to :group
 - belongs_to :user
