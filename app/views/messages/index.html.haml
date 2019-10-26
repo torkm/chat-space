@@ -1,0 +1,57 @@
+%header
+  .header
+    .userInfo 
+      .userInfo__name
+        = current_user.name
+      %ul.userInfo__links
+        %li.userInfo__links__edit
+        =link_to new_group_path do
+          = fa_icon 'edit',class: "fa-edit" 
+          %span<>
+        %li.userInfo__links__cog
+        =link_to edit_user_path(current_user) do
+          = fa_icon 'cog' ,class: "fa-cog"   
+          %span<>        
+
+    .groupInfo
+      .groupInfo-left
+        .groupInfo-left__name
+          = @group.name
+        .groupInfo-left__members
+          %ul 
+            Member : 
+            %li 
+              test-user
+            %li 
+              test-user2
+      %input.groupInfo__edit{type: "submit", value: "Edit"}
+%main
+  .sideBar
+    - current_user.groups.each do |group|
+      = link_to group_messages_path(group) do
+        .sideBar-group
+          .sideBar-group__name
+            = group.name
+          .sideBar-group__latest 
+            -# = group.messages.last
+            = group.show_last_message
+            
+  .messages
+    = render @messages
+    -# = render partial: 'message', collection: @messages の略
+
+    
+    %footer
+      = form_for [@group, @message],  html: { class: "post"} do |f|
+        .post__form
+          = f.text_field :body, class: 'post__form__text', placeholder: 'type' 
+
+          .post__form__file
+            = f.label :image do
+              = fa_icon 'picture-o', class: 'fa fa-image post__form__file-icon'
+              = f.file_field :image, class: 'post__form__file-button'
+
+        = f.submit 'send', class: 'post__submit'
+
+
+
