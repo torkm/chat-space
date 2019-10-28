@@ -16,7 +16,6 @@ describe MessagesController, type: :controller do
       # まずログインする loginして 
       before do
         login user
-        binding.pry
         get :index, params: { group_id: group.id }
         # 擬似的にindexアクションを動かすリクエストを行う」ために、getメソッドを利用しています。messagesのルーティングはgroupsにネストされているため、group_idを含んだパスを生成します。そのため、getメソッドの引数として、params: { group_id: group.id }を渡しています。
       end
