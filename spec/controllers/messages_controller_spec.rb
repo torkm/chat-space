@@ -1,4 +1,7 @@
 require 'rails_helper'
+
+# bundle exec rspec spec/controllers/messages_controller_spec.rb でテスト
+
 # メッセージ一覧ページを表示するアクション
 # ログインしている場合
 # アクション内で定義しているインスタンス変数があるか
