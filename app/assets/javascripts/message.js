@@ -1,6 +1,4 @@
 $(function () {
-
-
   function buildHTML(message) {
     let image = message.image_url ?
       `<img class="message__content__image" src=${message.image_url} alt="Fruits"></img>` : "";
@@ -28,7 +26,6 @@ $(function () {
 
   $('.post').on('submit', function (e) {
     e.preventDefault();
-    // 今回はurl = /groups/[id]/messagesとなる
     var url = $(this).attr('action');
     var formData = new FormData(this);
     var href = window.location.href;
@@ -43,10 +40,10 @@ $(function () {
     }).done(function (data) {
       let html = buildHTML(data);
       $('.messages').append(html);
-      // $('.messages').scrollTop($('.messages')[0].scrollHeight);
+
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight });
-      $('.post__form__text').val('')
-      $('.post__form__file-button').val('')
+      $('.post__form__text')[0].reset();
+      $('.post__form__file-button')[0].reset();
     }).fail(function () {
       alert('メッセージを入力してください');
     })
