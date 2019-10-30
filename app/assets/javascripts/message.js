@@ -9,7 +9,6 @@ $(function () {
       `<p class="message__content__text">
         ${message.body}
       </p>` : "";
-    console.log(image)
     let html = `<div class="message">
                 <div class="message__info">
                   <div class="message__info__speaker">
