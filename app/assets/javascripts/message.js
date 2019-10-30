@@ -56,6 +56,7 @@ $(function () {
     }).done(function (data) {
       let html = buildHTML(data);
       $('.messages').append(html);
+      $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight });
       $('.post__form__text').val('')
     }).fail(function () {
       alert('メッセージを入力してください');
@@ -64,3 +65,4 @@ $(function () {
   })
 })
 // 発火はform_forタグ全体のclassを指定する必要がある
+// return falseで 連続投稿は
