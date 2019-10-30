@@ -42,8 +42,7 @@ $(function () {
       $('.messages').append(html);
 
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight });
-      $('.post__form__text')[0].reset();
-      $('.post__form__file-button')[0].reset();
+      $('.post')[0].reset();
     }).fail(function () {
       alert('メッセージを入力してください');
     })
