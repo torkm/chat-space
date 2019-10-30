@@ -51,7 +51,8 @@
               = fa_icon 'picture-o', class: 'fa fa-image post__form__file-icon'
               = f.file_field :image, class: 'post__form__file-button'
 
-        = f.submit 'send', class: 'post__submit'
+        = f.submit 'Send',data: {disable_with: 'Sending...'},class: 'post__submit'
+
 
 
 
