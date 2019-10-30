@@ -14,7 +14,7 @@ $(function () {
                 </div>
                 <div class="message__content">
                   <p class="message__content__text">
-                    ${message.image}
+                    ${message.body}
                   </p>
 
                 </div>
@@ -60,6 +60,7 @@ $(function () {
     }).fail(function () {
       alert('メッセージを入力してください');
     })
+    return false;
   })
 })
 // 発火はform_forタグ全体のclassを指定する必要がある
