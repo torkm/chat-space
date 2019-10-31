@@ -27,6 +27,7 @@ $(function () {
     $(".js-add-user").append(html);
   };
 
+  // DBにユーザーが登録されるために必要なhtml
   function addMember(userId) {
     let html = `<input value="${userId}" name="group[user_ids][]" type="hidden" id="group_user_ids_${userId}" />`;
     $(`#${userId}`).append(html);
@@ -60,7 +61,7 @@ $(function () {
       })
       .fail(function () {
         console.log("データ取得失敗");
-        alert("ユーザー検索に失敗しました");
+        alert("通信エラーです。ユーザーが表示できません。");
       })
   })
   // 追加ボタンを押すと、検索結果から消えて、メンバーに追加されるように
@@ -69,11 +70,10 @@ $(function () {
     const userId = $(this).attr("data-user-id");
     $(this).parent().remove();
     appendDeleteUser(userName, userId);
+    addMember(userId);
   })
   // 削除を押すと、メンバーから消える (検索結果に戻るのは未実装)
   $(document).on('click', '.chat-group-user__btn--remove', function () {
-    const userName = $(this).attr("data-user-name");
-    const userId = $(this).attr("data-user-id");
     $(this).parent().remove();
   })
 });
