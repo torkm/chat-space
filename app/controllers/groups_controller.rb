@@ -12,10 +12,10 @@ class GroupsController < ApplicationController
   
   def create
     @group = Group.new(group_params)
-    # binding.pry
     if @group.save
       redirect_to root_path, notice: 'グループを作成しました'
     else
+      # redirect_to group_create_path?とは意味が違う
       render :new
     end  
   end
