@@ -19,12 +19,14 @@
           = @group.name
         .groupInfo-left__members
           %ul 
-            Member : 
-            %li 
-              test-user
-            %li 
-              test-user2
+            Member :  
+            - @group.members.each do |member|
+              %li
+              = member.user.name
+            
+
       %input.groupInfo__edit{type: "submit", value: "Edit"}
+      -# = link_to edit_group_path(@group.id)
 %main
   .sideBar
     - current_user.groups.each do |group|
