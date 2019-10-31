@@ -19,7 +19,6 @@ $(function () {
   }
 
 
-
   $("#user-search-field").on("keyup", function () {
     let input = $("#user-search-field").val();
     // console.log(input)
@@ -29,24 +28,31 @@ $(function () {
       url: "/users", // コントローラのあるURL 
       data: { keyword: input },
       dataType: 'json',
-    }).done(function (users) {
-      console.log("データ取得成功");
-      console.log(users);
-      $('#user-search-result').empty();
-      if (users.length !== 0) {
-        users.forEach(function (user) {
-          appendUser(user);
-        })
-      } else if (input.length == 0) {
-        return false;
-        // 一度入力して、消したときに UserNotFoundが呼び出されないように
-      }
-      else {
-        appendUserNotFound();
-      }
-    }).fail(function () {
-      console.log("データ取得失敗");
-      alert("ユーザー検索に失敗しました");
     })
+      .done(function (users) {
+        console.log("データ取得成功");
+        console.log(users);
+        $('#user-search-result').empty();
+        if (users.length !== 0) {
+          users.forEach(function (user) {
+            appendUser(user);
+          })
+        } else if (input.length == 0) {
+          return false;
+          // 一度入力して、消したときに UserNotFoundが呼び出されないように
+        }
+        else {
+          appendUserNotFound();
+        }
+      })
+      .fail(function () {
+        console.log("データ取得失敗");
+        alert("ユーザー検索に失敗しました");
+      })
   })
 });
+
+$(document).on('click', '.chat-group-user__btn--add', function (e) {
+  console.log('発火しました')
+  console.log(e)
+})
