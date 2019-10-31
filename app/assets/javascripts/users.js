@@ -37,12 +37,13 @@ $(function () {
         users.forEach(function (user) {
           appendUser(user);
         })
+      } else if (input.length == 0) {
+        return false;
+        // 一度入力して、消したときに UserNotFoundが呼び出されないように
       }
       else {
         appendUserNotFound();
       }
-
-
     }).fail(function () {
       console.log("データ取得失敗");
       alert("ユーザー検索に失敗しました");
