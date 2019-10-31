@@ -23,7 +23,7 @@ $(function () {
               </div>`;
     return html;
   }
-
+  // formタグ全体を指定
   $('.post').on('submit', function (e) {
     e.preventDefault();
     var url = $(this).attr('action');
@@ -42,6 +42,7 @@ $(function () {
       $('.messages').append(html);
 
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight });
+      // リセットはformタグ全体に
       $('.post')[0].reset();
     }).fail(function () {
       alert('メッセージを入力してください');
@@ -49,3 +50,4 @@ $(function () {
     return false;
   })
 })
+
