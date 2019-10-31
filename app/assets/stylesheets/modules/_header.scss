@@ -68,12 +68,13 @@ html, body {
     }
   }
   &__edit{
-  color: #38aef0;
-  background-color: $txt-white;  
-  height: 40px;
-  padding: 0 20px;
-  margin: 28px $w-mg-messages 28px 0;
-  border-color: #38aef0;
-  text-align: center;
+    color: #38aef0;
+    background-color: $txt-white;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    margin: 28px $w-mg-messages 28px 0;
+    border: 1px solid #38aef0;
+    text-align: center;
   }
 }
