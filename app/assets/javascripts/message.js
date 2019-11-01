@@ -15,6 +15,16 @@ $(function () {
     })
       .done(function (messages) {
         console.log('success');
+        //追加するHTMLの入れ物を作る
+        var insertHTML = '';
+        //配列messagesの中身一つ一つを取り出し、HTMLに変換したものを入れ物に足し合わせる
+        messages.each
+        buildMessageHTML よびだし
+        //メッセージが入ったHTMLを取得
+
+        //メッセージを追加
+        $('.messages').append(html)
+
       })
       .fail(function () {
         console.log('error');
@@ -61,7 +71,7 @@ $(function () {
       contentType: false,
     }
     ).done(function (data) {
-      let html = buildHTML(data);
+      let html = buildMessageHTML(data);
       $('.messages').append(html);
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight });
       // リセットはformタグ全体に
