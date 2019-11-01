@@ -21,7 +21,7 @@ $(function () {
       });
   };
 
-  function buildHTML(message) {
+  let buildMessageHTML = function (message) {
     let image = message.image.url ?
       `<img class="message__content__image" src=${message.image.url} alt="Fruits"></img>` : "";
 
@@ -30,20 +30,20 @@ $(function () {
         ${message.body}
       </p>` : "";
 
-    let html = `<div class="message">
-                <div class="message__info">
-                  <div class="message__info__speaker">
-                    ${message.user_name}
+    let html = `<div class="message" data-id=${message.id}>
+                  <div class="message__info">
+                    <div class="message__info__speaker">
+                      ${message.user_name}
+                    </div>
+                    <div class="message__info__date">
+                      ${message.created_at}
+                    </div>
                   </div>
-                  <div class="message__info__date">
-                    ${message.created_at}
+                  <div class="message__content">
+                    ${body}
+                    ${image}
                   </div>
-                </div>
-                <div class="message__content">
-                  ${body}
-                  ${image}
-                </div>
-              </div>`;
+                </div>`;
     return html;
   }
   // formタグ全体を指定
