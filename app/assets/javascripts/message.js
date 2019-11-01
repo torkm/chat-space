@@ -8,7 +8,6 @@ $(function () {
       dataType: 'json',
       data: { id: last_message_id }
     }).done(function (messages) {
-      console.log('success');
       var insertHTML = '';
       messages.forEach(function (message) {
         insertHTML += buildMessageHTML(message);
@@ -16,7 +15,7 @@ $(function () {
       $('.messages').append(insertHTML)
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight });
     }).fail(function () {
-      console.log('error');
+      alert('更新に失敗しました。');
     });
   };
 
