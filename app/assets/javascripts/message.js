@@ -1,5 +1,4 @@
 $(function () {
-
   var reloadMessages = function () {
     //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
     let last_message_id = $('.message').last().data('id');
@@ -37,23 +36,23 @@ $(function () {
 
     let body = message.body ?
       `<p class="message__content__text">
-        ${message.body}
-      </p>` : "";
+          ${message.body}
+        </p>` : "";
 
     let html = `<div class="message" data-id=${message.id}>
-                  <div class="message__info">
-                    <div class="message__info__speaker">
-                      ${message.user_name}
+                    <div class="message__info">
+                      <div class="message__info__speaker">
+                        ${message.user_name}
+                      </div>
+                      <div class="message__info__date">
+                        ${message.created_at}
+                      </div>
                     </div>
-                    <div class="message__info__date">
-                      ${message.created_at}
+                    <div class="message__content">
+                      ${body}
+                      ${image}
                     </div>
-                  </div>
-                  <div class="message__content">
-                    ${body}
-                    ${image}
-                  </div>
-                </div>`;
+                  </div>`;
     return html;
   }
   // formタグ全体を指定
@@ -80,6 +79,9 @@ $(function () {
     })
     return false;
   })
-  setInterval(reloadMessages, 5000);
+  let timer = setInterval(reloadMessages, 5000);
+  if (window.location.href.match(/messages/)) {
+  } else {
+    clearInterval(timer);
+  };
 });
-
