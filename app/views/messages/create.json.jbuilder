@@ -1,4 +1,6 @@
-  json.body  @message.body
-  json.image_url @message.image.url
-  json.user_name  @message.user.name
-  json.created_at @message.created_at.strftime("%Y/%m/%d %H:%M")
+json.(@message, :body, :image)
+json.created_at @message.created_at.strftime("%Y/%m/%d %H:%M")
+json.user_name @message.user.name
+#idもデータとして渡す
+json.id @message.id
+
