@@ -51,5 +51,5 @@ production:
   <<: *default
   database: chat-space_production
   username: root
-  password: <%= ENV['DATABASE_PASSWORD'] %>
+  password: tomoyuki
   socket: /var/lib/mysql/mysql.sock
