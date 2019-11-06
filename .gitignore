@@ -18,3 +18,5 @@
 
 # Ingore to commit the posted contents
 public/uploads/*
+
+config/secrets.yml
