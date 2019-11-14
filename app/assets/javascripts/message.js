@@ -63,7 +63,6 @@ $(function () {
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight });
       $('.post')[0].reset();
     }).fail(function (jqXHR, textStatus, errorThrown) {
-      alert('メッセージを入力してください')
       alert("error : " + errorThrown);
     })
     return false;
